@@ -1,5 +1,3 @@
-package versionBuffered_3LVL;
-
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 

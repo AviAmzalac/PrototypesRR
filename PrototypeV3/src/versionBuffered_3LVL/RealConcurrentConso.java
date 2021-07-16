@@ -1,6 +1,3 @@
-package versionBuffered_3LVL;
-
-
 import java.util.concurrent.BlockingQueue;
 
 public class RealConcurrentConso implements Consommateur {
@@ -15,8 +12,12 @@ public class RealConcurrentConso implements Consommateur {
 
     @Override
     public void calculate(float f){
-        buffer.offer(f);
-        System.out.println("RdC : J'ai ajouté "+f+" au buffer");
+        if(buffer.remainingCapacity()>0) {
+            buffer.offer(f);
+            System.out.println("RcC : J'ai ajouté " + f + " au buffer");
+        } else {
+            System.out.println("RcC : Le buffer est plein");
+        }
     }
 
     public void finished() {

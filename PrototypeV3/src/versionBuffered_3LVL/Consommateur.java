@@ -1,5 +1,3 @@
-package versionBuffered_3LVL;
-
 import java.io.IOException;
 
 public interface Consommateur {

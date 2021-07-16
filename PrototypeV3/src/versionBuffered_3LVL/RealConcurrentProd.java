@@ -1,5 +1,3 @@
-package versionBuffered_3LVL;
-
 import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
 
@@ -18,7 +16,7 @@ public class RealConcurrentProd implements Runnable{
     }
 
     public float takeFromBuffer() throws InterruptedException {
-        System.out.println("RdP : J'ai lu "+buffer.peek()+" et je l'ai donné au consommateur");
+        System.out.println("RcP : J'ai lu "+buffer.peek()+" et je l'ai donné au consommateur");
         return buffer.take();
 
     }
